@@ -1,0 +1,21 @@
+-- 根目录
+skynet_path = '/skynet'
+service_path = '/www/websocket'
+
+-- 节点名称
+node = 'node_1'
+
+-- 启用工作线程数 | c 编写的服务模块的位置 | 启动第一个服务
+thread = 8
+cpath = skynet_path .. '/cservice/?.so' 
+bootstrap = 'snlua bootstrap'
+
+-- 主程序入库 | 适用 cluster 的集群模式
+start = 'main'
+harbor = 0
+
+-- lua 配置项
+lualoader = skynet_path .. '/lualib/loader.lua'
+luaservice = skynet_path .. "/service/?.lua;" .. service_path .. "/?.lua"
+lua_path = skynet_path .. "/lualib/?.lua;" .. skynet_path .. "/lualib/?/init.lua;" .. service_path .. "/?.lua"
+lua_cpath = skynet_path .. "/luaclib/?.so;" .. service_path .. "/luaclib/?.so"

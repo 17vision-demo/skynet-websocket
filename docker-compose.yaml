@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  skynet: 
+    build:
+      context: ./service/skynet
+    image: skynet:1.7
+    container_name: skynet1.7
+  websocket:
+    image: skynet:1.7
+    container_name: websocket
+    volumes:
+      - ./www:/www
+    command: /skynet/skynet /www/websocket/etc/config
+    depends_on:
+      - skynet
