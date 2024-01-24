@@ -2,8 +2,8 @@
 skynet_path = '/skynet'
 service_path = '/www/websocket'
 
--- 节点名称
-node = 'node_1'
+-- 端口号
+port = 8081
 
 -- 启用工作线程数 | c 编写的服务模块的位置 | 启动第一个服务
 thread = 8
