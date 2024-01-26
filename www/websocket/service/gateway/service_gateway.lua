@@ -1,6 +1,8 @@
 local skynet = require 'skynet'
 local console = require 'utils/console'
 
+local Server = '.Server'
+
 -- 路由
 local cmd = {}
 
@@ -15,7 +17,9 @@ end
 local function start(...)
     local port = ...
     local ws = 'ws'
-    skynet.newservice('service/connect/websocket', ws, port)
+    local server = skynet.newservice('service/connect/websocket', ws, port)
+    skynet.wait(Server)
+    skynet.name(Server, server)
 end
 
 skynet.start(function()

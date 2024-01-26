@@ -13,4 +13,3 @@ services:
     ports:
       - 8081:8081
     command: /skynet/skynet /www/websocket/etc/config
-    # command: /skynet/skynet /skynet/examples/simplewebsocket.lua

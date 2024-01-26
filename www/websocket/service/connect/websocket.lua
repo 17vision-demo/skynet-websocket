@@ -1,6 +1,6 @@
-local skynet = require "skynet"
-local socket = require "skynet.socket"
-local websocket = require "http.websocket"
+local skynet = require 'skynet'
+local socket = require 'skynet.socket'
+local websocket = require 'http.websocket'
 local console = require 'utils/console'
 local cmd = {}
 local handler = {}
